@@ -36,8 +36,127 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+// Nav Bar
+const navBarKeys = Object.keys(siteContent.nav).filter(key => {
+  if (key.includes('nav')) {
+    return key;
+  }
+});
 
-// Example: Update the img src for the logo
+console.log(navBarKeys);
+const navBar = document.querySelectorAll('nav a');
+navBar.forEach((element,index) => {
+  element.textContent = siteContent.nav[navBarKeys[index]];
+});
+
+// CTA
+
+const ctaText = document.querySelector(".cta-text h1");
+ctaText.innerHTML = "DOM<br />is</br />Awesome"
+const ctaBtn = document.querySelector(".cta-text button");
+ctaBtn.textContent = siteContent.cta.button;
+
+// Main Content
+const h4list = document.querySelectorAll(".main-content h4");
+
+// const topContentP = document.querySelectorAll(".main-content .top-content .text-content p");
+// console.log(topContentH4);
+
+const h4Keys = Object.keys(siteContent["main-content"]).filter(key => {
+  if (key.includes('h4')) {
+    return key;
+  }
+});
+h4list.forEach((element,index) => {
+  element.textContent = siteContent["main-content"][h4Keys[index]];});
+console.log(h4Keys);
+
+
+const mainPlist = document.querySelectorAll(".main-content p");
+const mainPKeys = Object.keys(siteContent["main-content"]).filter(key => {
+  if (key.includes('content')) {
+    return key;
+  }
+});
+mainPlist.forEach((element,index) => {
+  element.textContent = siteContent["main-content"][mainPKeys[index]];});
+
+
+// const contact = document.querySelectorAll(".contact");
+// const contactChildren = contact.childNodes;
+// console.log(contactChildren);
+// const contactKeys = Object.keys(siteContent.contact);
+// contact.children.ForEach((element,index) => {
+//   element.textContent = siteContent.contact[contactKeys[index]];
+// });
+
+const contacth4 = document.querySelector(".contact h4");
+contacth4.textContent = siteContent["contact"]["contact-h4"];
+
+const contactP = document.querySelectorAll(".contact p");
+contactP[0].textContent = siteContent["contact"]["address"];
+contactP[1].textContent = siteContent["contact"]["phone"];
+contactP[2].textContent = siteContent["contact"]["email"];
+// console.log(contactItems[0]);
+// contactItems.forEach((element,i) => {
+//   const contactJSON = Array.from(siteContent["contact"]);
+//   const contactJSONEntries = Object.entries(siteContent["contact"]);
+//   console.log(contactJSON);
+//   element.textContent = siteContent["contact"][i];
+//   console.log(element);
+// });
+// function contactPLoop() {
+//   for (let i = 0; i < contactP.children.length; i++);
+// }
+// console.log(contactItems);
+// contactP.textContent = siteContent["contact"]["contact-h4"];
+
+// siteContent["contact"].forEach((currentValue) => {
+// contactItems = document.querySelectorAll(".contact");
+// console.log(contactItems);
+// document.querySelectorAll(".contact").children.ForEach(()
+//   textContent = siteContent["contact"][currentValue];
+// });
+
+// document.
+// contactStuff = document.querySelectorAll("contact");
+// contactStuff = document.getElementsByClassName("contact");
+// console.log(contactStuff.children);
+// console.log(contactStuff.childNodes);
+// contactStuff.children.forEach(() => {
+//   const currentItem = contactStuff[i];
+//   console.log(currentItem);
+//   // textContent = Object.entries(
+// });
+// function contactChildSet() {
+//   for (let i = 0; i < contactStuff[0].children.length; i++) {
+//     contactStuff[0].children[i].textContent = Object.entries(siteContent["contact"][i]);
+//   }
+//   console.log('Ran?')
+// }
+// console.log(contactStuff[0].children.length);
+// console.log(contactStuff[0].children[0]);
+// contactChildSet();
+// siteContent["contact"].forEach( => {
+//   contactStuff[0].children[i].textContent = siteContent
+// }
+// console.log(siteContent["contact"]);
+// console.log(Object.entries(siteContent["contact"]));
+// Object.entries(siteContent["contact"].forEach(
+// console.log(siteContent["contact"]);
+// contactChildSet();
+// console.log(contactStuff);
+// console.log(contactStuff[0].children);
+// contactStuff.textContent = siteContent["contact"];
+
+// Footer
+copywrong = document.querySelector("footer p");
+copywrong.textContent = siteContent["footer"]["copyright"];
+
+// [""0""].children
+
+
+// Images
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -46,6 +165,9 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+
 
 // * [ ] Remember, NO direct updating of the HTML source is allowed.
 // * [ ] Using your selectors, update the content to match the example file.
