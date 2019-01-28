@@ -40,3 +40,17 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// * [ ] Remember, NO direct updating of the HTML source is allowed.
+// * [ ] Using your selectors, update the content to match the example file.
+// * [ ] Remember to update the src attributes on images
+
+// * [ ] Change the color of the navigation text to be green.
+// use .appendChild()` and `.prepend()
+// add two new items to the navigation system. You can call them whatever you want.
