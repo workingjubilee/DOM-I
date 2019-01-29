@@ -176,3 +176,16 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 // * [ ] Change the color of the navigation text to be green.
 // use .appendChild()` and `.prepend()
 // add two new items to the navigation system. You can call them whatever you want.
+
+navBar.forEach(element => {
+  element.style.color ="green"
+});
+
+let navtarget = document.querySelector('nav');
+let JSMischief = document.createElement("a")
+let JSMischief2 = document.createElement("a")
+navtarget.appendChild(JSMischief);
+JSMischief.textContent = "Doom!"
+// textContent = "JS Mischief!");
+navtarget.prepend(JSMischief2);
+JSMischief2.textContent = "Boo!"
